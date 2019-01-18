@@ -1,0 +1,385 @@
+{
+	"info": {
+		"name": "Bugtracker-JPA",
+		"_postman_id": "471eeb79-3ec3-e10e-1d1f-c479ee636116",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/application/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Trackzilla\",\n\t\"description\" : \"An application used to track defects and enhancements.\",\n\t\"owner\": \"Kesha Williams\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/application/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/application/ copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Invoice Processing\",\n\t\"description\" : \"An application used to process invoices.\",\n\t\"owner\": \"Kesha Williams\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/application/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/application/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/application/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application",
+						"1"
+					]
+				},
+				"description": "A specific application id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/applications/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/applications/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"applications",
+						""
+					]
+				},
+				"description": "list all applications"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/application/",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"TrackzillaNew\",\n\t\"description\": \"The new description\",\n    \"owner\": \"John Doe\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/application/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/application/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/application/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/release/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"releaseDate\": \"2025-09-14\",\n\t\"description\": \"The description\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/release/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"release",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/release/ (with Apps)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"releaseDate\": \"2025-09-01\",\n\t\"description\": \"The description\",\n\t\"applications\": [{\"name\": \"New App1\", \"description\": \"App added with release\", \"owner\": \"Jane Doe\"},{\"name\": \"New App2\", \"description\": \"Another app added with release\", \"owner\": \"Jane Doe\"}]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/release/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"release",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/ticket/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Multiple Assignees Needed\",\n\t\"description\" : \"There are cases where we need to assign a ticket to more than one person.\",\n\t\"application\": {\"id\":\"1\"},\n\t\"release\": {\"id\":\"1\"},\n\t\"status\": \"Open\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/ticket/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ticket",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/release/1/1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/release/1/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"release",
+						"1",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/release/1/1 copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/api/release/2/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"release",
+						"2",
+						"1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/bug/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Test Bug\",\n\t\"description\" : \"Some bug description.\",\n\t\"application\": {\"id\":\"2\"},\n\t\"release\": {\"id\":\"2\"},\n\t\"severity\": \"1\"\n,\n\t\"rootCause\": \"rootCause\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/bug/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"bug",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/enhancement/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Test Enhancement\",\n\t\"description\" : \"Some enhancement description.\",\n\t\"application\": {\"id\":\"2\"},\n\t\"release\": {\"id\":\"2\"},\n\t\"duplicate\": \"false\"\n,\n\t\"priority\": \"high\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/enhancement/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"enhancement",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
